@@ -1,7 +1,8 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://192.168.10.196:8080/api/airFlow'
+  // baseURL: 'http://192.168.10.196:8080/api/airFlow'
+      baseURL: 'http://10.177.173.24:8080/api/airFlow'
 });
 
 // export const loginDriver = (username: string, password: string) =>

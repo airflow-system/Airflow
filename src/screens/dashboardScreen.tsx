@@ -6,8 +6,8 @@ import { scheduleToAirport } from '../api';
 import Geolocation from '@react-native-community/geolocation';
 
 export default function DashboardScreen({ navigation }: any) {
-  const truckId = '87e25afd-edfd-417b-a4d8-c13bdbd47da2';
-  const driverId = '6fcfb5d8-5ff8-4dbc-b6a5-98793bf2c2de';
+  const truckId = '36679fa3-b03d-4d59-9374-6663464c8284';
+  const driverId = '9d7812f5-de5c-4e6e-a236-fbb488cbd915';
   const dispatch = useAppDispatch();
 
   const requestLocationPermission = async () => {
@@ -52,9 +52,11 @@ export default function DashboardScreen({ navigation }: any) {
             navigation.navigate('Route', {
               tripId: trip.id,
               currentLocation: trip.currentLocation,
-              // currentLocation:"32.9482,-96.7297",
               relevantLocation: trip.currentRoute.relevantLocation,
               encodedPolyline: trip.currentRoute.encodedPolyline,
+              estimatedArrivalTime: trip.estimatedArrivalTime,
+              reservedParkingSlot: trip.reservedParkingSlot,
+              latestDaliAdvice: trip.latestDaliAdvice,
             });            
 
           } catch (error: any) {

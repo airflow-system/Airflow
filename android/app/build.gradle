@@ -96,6 +96,7 @@ android {
     buildTypes {
         debug {
             signingConfig signingConfigs.debug
+            // debuggable true
         }
         release {
             // Caution! In production, you need to generate your own keystore file.
@@ -106,7 +107,6 @@ android {
         }
     }
 }
-def MAPS_API_KEY = project.hasProperty("MAPS_API_KEY") ? project.MAPS_API_KEY : ""
 
 
 dependencies {
